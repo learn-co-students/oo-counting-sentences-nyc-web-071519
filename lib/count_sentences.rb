@@ -15,6 +15,11 @@ class String
   end
 
   def count_sentences
-    self.end_with?(".") ? self.count(".") : 0
+    string = self
+    string = string.split('.')
+    string = string.flat_map{|i| i.split("!")}
+    string = string.flat_map{|i| i.split("?")}
+    string.length
   end
+
 end
