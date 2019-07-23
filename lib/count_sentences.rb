@@ -3,40 +3,18 @@ require 'pry'
 class String
 
   def sentence?
-    
-    if 
-      self.end_with?(".")
-      return true
-    else
-      return false
-    end
-
+      self.end_with?(".") # return type boolean, so no need to put "return true/false"
   end
 
   def question?
-
-    if
       self.end_with("?")    
-      return true
-    else 
-      return false
-    end
-
   end
 
   def exclamation?
-
-    if
       self.end_with("!")
-      return true
-    else 
-      return false
-
   end
 
   def count_sentences
-
-    self.split("!")
-
+    self.split(/\.|\?|\!/)
   end
 end
